@@ -1,17 +1,21 @@
 import model
-import view as v
+import view2 as v
 
-def controllerLoop():
+score = 10
+def controller_loop():
+    global score
     user_choise = v.get_choise()
-    user_scores = 10
-    if user_choise == 1:
+    if user_choise == '1':
         value = model.get_random_value()
-        score = model.get_scores(user_scores, value)
-        message = model.check_scores(score)
+        score = model.get_scores(score, value)
+        message, result = model.check_scores(score)
         v.view_message(message)
+    else:
+        v.view_message('Введено неверное значение')
 
 def main():
-    v.view_message('Сыграем в кости? (1): ')
+    v.view_message('Сыграем в кости?')
+    result = False
     f = v.get_loop()
     f()
 

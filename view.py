@@ -1,7 +1,7 @@
 import controller
 
 def get_choise():
-    return input('Играем? 1/2:')
+    return input('Нажмите для продоожения (1): ')
 
 def view_message(mes):
     print(mes)
@@ -11,4 +11,4 @@ def get_loop():
 
 def mainloop():
     while True:
-        controller.controllerLoop()
+        controller.controller_loop()

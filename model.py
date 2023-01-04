@@ -11,8 +11,8 @@ def get_scores(user_scores, value):
         user_scores -= 1
         return user_scores
     
-def check_scores(user_scores):
+def check_scores(user_scores: int):
     if user_scores == 0:
-        return 'Вы проиграли'
+        return 'Вы проиграли', False
     elif user_scores > 0:
-        return f'Очки пользователя: {user_scores}'
+        return f'Очки пользователя: {user_scores}', True

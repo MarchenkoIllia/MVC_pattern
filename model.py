@@ -11,3 +11,8 @@ def get_scores(user_scores, value):
         user_scores -= 1
         return user_scores
     
+def check_scores(user_scores):
+    if user_scores == 0:
+        return 'Вы проиграли'
+    elif user_scores > 0:
+        return f'Очки пользователя: {user_scores}'
